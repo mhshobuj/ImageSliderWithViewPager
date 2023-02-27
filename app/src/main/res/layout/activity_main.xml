@@ -7,6 +7,14 @@
     android:orientation="horizontal"
     tools:context=".MainActivity">
 
+   <androidx.appcompat.widget.AppCompatButton
+       android:id="@+id/btnScan"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:padding="5dp"
+       android:layout_centerHorizontal="true"
+       android:text="SCAN CODE"/>
+
    <androidx.viewpager.widget.ViewPager
        android:layout_centerInParent="true"
        android:overScrollMode="never"

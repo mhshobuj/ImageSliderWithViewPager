@@ -43,6 +43,12 @@ dependencies {
     implementation 'com.github.bumptech.glide:glide:4.14.2'
     // Glide v4 uses this new annotation processor -- see https://bumptech.github.io/glide/doc/generatedapi.html
     annotationProcessor 'com.github.bumptech.glide:compiler:4.14.2'
-
+    // dot indicator
     implementation("com.tbuonomo:dotsindicator:4.3")
+
+    /** QR code scanner **/
+    implementation 'me.dm7.barcodescanner:zxing:1.9.13'
+
+    /** Dexter **/
+    implementation 'com.karumi:dexter:6.2.3'
 }

@@ -1,10 +1,12 @@
 package com.example.slideimagewithviewpager;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AppCompatButton;
 import androidx.viewpager.widget.ViewPager;
 
-import android.net.Uri;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 import com.tbuonomo.viewpagerdotsindicator.WormDotsIndicator;
 
@@ -12,6 +14,7 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
+    AppCompatButton btnScan;
     ViewPager viewPager;
     ArrayList<String> images = new ArrayList<>();
     ViewPagerAdapter adapter;
@@ -22,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        btnScan = findViewById(R.id.btnScan);
         viewPager = findViewById(R.id.viewPager);
         wormDotsIndicator = (WormDotsIndicator) findViewById(R.id.worm_dots_indicator);
 
@@ -37,6 +41,10 @@ public class MainActivity extends AppCompatActivity {
         viewPager.setAdapter(adapter);
 
         wormDotsIndicator.attachTo(viewPager);
+
+        btnScan.setOnClickListener(v ->
+                startActivity(new Intent(MainActivity.this, BarCodeScannerActivity.class))
+        );
 
     }
 }
