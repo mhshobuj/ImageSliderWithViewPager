@@ -15,6 +15,15 @@
        android:layout_centerHorizontal="true"
        android:text="SCAN CODE"/>
 
+   <androidx.appcompat.widget.AppCompatButton
+       android:id="@+id/btnLocation"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_below="@id/btnScan"
+       android:padding="5dp"
+       android:layout_centerHorizontal="true"
+       android:text="Location"/>
+
    <androidx.viewpager.widget.ViewPager
        android:layout_centerInParent="true"
        android:overScrollMode="never"
